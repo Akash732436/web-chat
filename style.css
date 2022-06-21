@@ -1,0 +1,371 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    
+
+}
+body
+{   display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("img/back3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper-signup
+{
+    border-style:solid;
+    background:#226e79;
+    border-radius: 5px;
+    padding: 12px 15px 12px 15px;
+    box-shadow:0 0 128px 0 rgba(0,0,0,0.1),
+               0 32px 64px -48px rgba(0,0,0,0.5);
+    height: 450px;
+    width: 400px;
+}
+ form .input-details
+{
+  margin-top: 5px;
+  display: flex;
+  position: relative;
+}
+form .input-details i{
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top:60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+ form .input-details i.active::before{
+    color: #333;
+    content: "\f070";
+}
+form .error-text
+{
+    font-size: medium;
+    
+    background-color: rgb(231, 91, 91);
+    border-radius: 3px;
+    align-items: center;
+    display: none;
+    margin: 3px;
+    padding: 3px;
+}
+
+.wrapper-login
+{
+    border-style:solid;
+    background:#226e79;
+    border-radius: 10px;
+    padding: 12px 15px 12px 15px;
+    padding-top:30px;
+    box-shadow:0 0 128px 0 rgba(0,0,0,0.1),
+               0 32px 64px -48px rgba(0,0,0,0.5);
+    height: 350px;
+    width: 400px;
+}
+
+.wrapper-user
+{
+    border-style: solid;
+    background:#446386;
+    box-sizing: content-box;
+    border-radius: 10px;
+    padding:12px 15px 12px 15px;
+    padding-top: 30px;
+    box-shadow:0 0 128px 0 rgba(0,0,0,0.1),
+               0 32px 64px -48px rgba(0,0,0,0.5);
+    height: 350px;
+    width: 400px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    flex-wrap: nowrap;
+}
+.wrapper-user::-webkit-scrollbar
+{
+    width: 0px;
+}
+form header
+{   
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom:1px solid #e6e6e6;
+    position: relative;
+}
+form .name-details
+{
+  display:flex
+}
+form .name-details .field-inp:first-child
+{
+    margin-right: 5px;
+}
+form .name-details .field-inp:last-child
+{
+    margin-left: 5px;
+}
+form .details
+{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+    padding-top: 3px; 
+}
+form label
+{
+    margin-top: 10px;
+    font-size: 12px;
+    font-style: oblique;
+}
+form input
+{
+    border:1px solid #ccc;
+    padding:2px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+}
+form .messageInp{
+    width: 350px;
+}
+form .end input
+{
+    color: black;
+    background-color: rgba(17, 23, 46, 0.363);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width:40%;
+    
+}
+.user
+{
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.wrapper-user .user-details span
+{
+    display: flex;
+    align-self: flex-start;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 5px;
+    margin-left: 5px;
+    font-weight: 600;
+}
+.wrapper-user .user .user-details p
+{
+    text-align: left;
+    font-family: cursive
+    ;
+    font-weight: 200;
+    padding-right: 50px;
+    padding-top: 8px;
+    margin-left: 5px;
+    align-self: flex-start;
+}
+.wrapper-user .user .logout
+{
+    background: black;
+    padding:5px 12px;
+    margin-left: 50px;
+    display: flex;
+    font-size: 16px;
+    align-self: flex-end;
+}
+.wrapper-user .user a
+{
+    color: white;
+}
+.search-bar
+{
+    display: flex;
+    color: white;
+    size: 10px;
+    height: 30px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding-bottom: 5px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.search-bar button
+{
+    color: #333;
+    height: 32px;
+    background:#446386;
+    font-size: 16px;
+    align-items: center;
+    width: 37px;
+    border: 1px solid #446386;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.search-bar button.active
+{
+    color: #fff;
+    background: #333;
+}
+.search-bar button.active i::before
+{
+    content: "\f00d";
+}
+.search-bar input
+{
+    position: absolute;
+    height: 32px;
+    width: 91%;
+    border: 1px solid #ccc;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.search-bar input.active{
+opacity: 1;
+pointer-events: auto;
+}
+.search-bar .text{
+    font-family: cursive;
+}
+input
+{
+    flex-direction: column;
+    width: 100%;
+}
+.wrapper-user .user-img
+{
+    object-fit: cover;
+    border-radius: 50%;   
+}
+.wrapper-user .user-info a
+{
+    display: flex;
+    margin-top: 8px;
+    padding-top: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 5px;
+    page-break-after: 10px;
+}
+.wrapper-user .user-info a:last-child
+{
+    border:none;
+    margin-bottom: 0px;
+}
+
+.wrapper-user a
+{
+    color:black;
+}
+
+.wrapper-user .user-info a .wrap
+{
+    display: flex;
+}
+.wrapper-user .user-info a .wrap .user-name
+{  
+    margin-left: 5px;
+    
+}
+.wrapper-user .user-info a .wrap .user-name span
+{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.wrapper-user .user-info a .wrap .user-name p
+{
+    margin-left:45px;
+}
+.wrapper-user .user-info a .wrap .user-name i
+{   display: flex;
+    font-size: 8px;
+    margin-left: 330px;
+    
+}
+.wrapper-user .footer
+{  padding-left: 2px;
+   display: flex;
+   margin-top:10px;
+   width:100%;
+   bottom: 0;
+   padding-bottom: 2px;
+   
+}
+
+.wrapper-user .left
+{
+  align-content: flex-start;
+  word-wrap: break-word;
+  background: black;
+  max-width: 80px;
+  padding:8px;
+  color:white;
+  border:solid white;
+  margin-top: 15px;
+  border-radius:25px 25px 25px 1px ;
+  margin-left: 45px;
+}
+
+.wrapper-user .right
+{   
+    max-width: 80px;
+    word-wrap: break-word;
+    border:solid white;
+    background: black;
+    color: white;
+    margin-top: 15px;
+    padding: 8px;
+    padding-left:17px;
+    border-radius:25px 25px 1px 25px ;
+    text-align: right;
+    margin-left: 300px;
+}
+.wrapper-user  .msg
+{
+  font-size: 12px;
+}
+.wrapper-user  .chat-img
+{
+  border-radius: 50%;
+  
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+
+.wrapper-user .pack
+{ 
+    margin-top: 15px;
+}
+
+.wrapper-user .footer button
+{
+  cursor: pointer;
+  height: 38px;
+  width: 40px;
+  font-size: 19px;
+  background: #333;
+  color: #fff;
+}
+
